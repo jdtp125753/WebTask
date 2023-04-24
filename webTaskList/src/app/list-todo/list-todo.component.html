@@ -1,0 +1,13 @@
+<div class="container">
+  <ul>
+    <li class="container__list" *ngFor="let task of taskiList">
+
+      <label class="container__title">
+        {{task.title}}
+      </label>
+      <p class="container__descrip">
+        {{task.description}}
+      </p>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+@mixin content(){
+  width: 100%;
+  text-align: center;
+  display: inline-flex;
+  &__block{
+    position: relative;
+    width: 40%;
+    margin: 0.5%;
+  }
+}
+.container{
+ @include content();
+}
