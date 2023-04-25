@@ -5,6 +5,7 @@
   border-radius: 1rem;
   text-align: center;
   background-color: grey;
+
   &__inTitle{
     width: 95%;
     height: 2rem;
@@ -23,17 +24,18 @@
   &__inDescrip{
     width: 95%;
     height: 20rem;
-    color: greenyellow;
+    margin-top: 2%;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 2rem;
+    color: greenyellow;
     border-top-style: none;
     border-bottom-color: red;
     border-left-color: orange;
     border-right-color: yellow;
     background-color: transparent;
-    margin-top: 2%;
   }
+
   &__click{
     width: 80%;
     height: 2rem;
@@ -60,7 +62,6 @@
   }
   &__title {
     width: 50%;
-    margin: 1%;
     padding: 0;
     font-size: 100%;
     display: inline-block;
@@ -68,10 +69,13 @@
   }
   &__descrip {
     width: 80%;
+    margin: 1%;
     padding: 1%;
     margin: auto;
-    padding: 2%;
     font-size: 80%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     justify-content: center;
     border-radius: 1rem;
     color: rgb(22, 1, 1);

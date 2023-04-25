@@ -8,6 +8,7 @@
   background-color: rgba(255, 217, 0, 0.445);
   &__list {
     width: 90%;
+    margin-top: 1%;
     margin-left: 2%;
     border-radius: 1rem;
     justify-content: left;
@@ -26,11 +27,15 @@
     width: 80%;
     padding: 1%;
     margin: auto;
-    padding: 2%;
     font-size: 90%;
-    justify-content: center;
     border-radius: 1rem;
+    overflow-y: hidden scroll;
+    white-space: normal;
+    display: inline-flex;
+    word-wrap: break-word;
     color: rgb(22, 1, 1);
+    overflow-wrap: break-word;
+    justify-content: center;
     background-color: rgb(128, 128, 128, 0.685);
   }
 }

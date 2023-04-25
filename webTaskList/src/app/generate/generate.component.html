@@ -1,6 +1,7 @@
 <form action="" class="container">
   <input type="text" class="container__inTitle" placeholder="Title" [(ngModel)]="newTask.title" [ngModelOptions]="{standalone:true}" >
-  <input type="text" class="container__inDescrip" placeholder="Description" [(ngModel)]="newTask.description" [ngModelOptions]="{standalone:true}"  >
+  <textarea  class="container__inDescrip" placeholder="Description" [(ngModel)]="newTask.description" [ngModelOptions]="{standalone:true}">
+  </textarea>
   <button class="container__click" (click)="submitSave()">Save</button>
   <div class="container__previ">
     <h4 class="container__title-1">Previsualización</h4>
