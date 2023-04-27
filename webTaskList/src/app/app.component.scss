@@ -1,5 +1,6 @@
 @mixin content(){
   width: 100%;
+  margin-top: 7%;
   text-align: center;
   display: inline-flex;
   &__block{
@@ -8,6 +9,24 @@
     margin: 0.5%;
   }
 }
+@mixin headeri(){
+  position: fixed;
+  width: 98%;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(255, 0, 0);
+  &__title{
+    margin: 0.5%;
+    font-size: 400%;
+
+    color: orange;
+  }
+}
 .container{
  @include content();
+}
+
+.headeris{
+  @include headeri();
 }

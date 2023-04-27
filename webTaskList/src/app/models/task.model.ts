@@ -1,9 +1,10 @@
 export class tasking{
   title?: string;
   description?: string;
-  
-  constructor(title = '', description = ''){
+  complete: boolean;
+  constructor(title = '', description = '', ){
     title = title;
     description = description;
+    this.complete = false;
   }
 }

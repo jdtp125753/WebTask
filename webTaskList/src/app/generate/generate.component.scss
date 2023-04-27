@@ -1,4 +1,4 @@
-@mixin containerForms(){
+@mixin containerForms() {
   position: absolute;
   width: 100%;
   height: 500px;
@@ -6,13 +6,13 @@
   text-align: center;
   background-color: grey;
 
-  &__inTitle{
+  &__inTitle {
     width: 95%;
     height: 2rem;
-    color: greenyellow;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 2rem;
+    color: greenyellow;
     border-top-style: none;
     border-bottom-color: red;
     border-left-color: orange;
@@ -21,11 +21,11 @@
     margin-top: 2%;
   }
 
-  &__inDescrip{
+  &__inDescrip {
     width: 95%;
-    height: 20rem;
     resize: none;
-    margin-top: 2%;
+    height: 20rem;
+    margin-top: 3%;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 2rem;
@@ -37,30 +37,35 @@
     background-color: transparent;
   }
 
-  &__click{
-    width: 80%;
+  &__click {
+    width: 40%;
     height: 2rem;
     border: none;
-    margin-top: 1%;
-    font-size: 120%;
+    margin-top: 5%;
     color: orange;
+    font-size: 120%;
     border-radius: 1rem;
     background-color: rgb(29, 26, 26);
   }
-  &__title-1{
-    width: 100%;
-    font-size: 110;
-    color: greenyellow;
-    border-radius: 1rem;
-    background-color: red;
-  }
+
   &__previ {
-    width: 100%;
-    margin-top: 2%;
-    border-radius: 1rem;
+    position: fixed;
+    width: 16%;
+    padding: 0.5%;
+    margin-top: -26.6%;
+    margin-left: 80.5%;
     text-align: center;
+    border-radius: 1rem;
     background-color: orange;
   }
+
+  &__title-1 {
+    width: 100%;
+    font-size: 110;
+    color: rgb(255, 61, 47);
+    border-radius: 1rem;
+  }
+
   &__title {
     width: 50%;
     padding: 0;
@@ -70,20 +75,18 @@
   }
   &__descrip {
     width: 80%;
-    margin: 1%;
-    padding: 1%;
     margin: auto;
+    padding: 1%;
     font-size: 80%;
     white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    justify-content: center;
     border-radius: 1rem;
+    word-wrap: break-word;
     color: rgb(22, 1, 1);
+    overflow-wrap: break-word;
     background-color: rgb(128, 128, 128, 0.685);
   }
 }
 
-.container{
+.container {
   @include containerForms();
 }

@@ -11,7 +11,6 @@ export class GenerateComponent  implements OnInit{
   @Output() addTask: EventEmitter<tasking>;
 
   newTask: tasking;
-
   constructor(){
     this.newTask = new tasking();
     this.addTask =new EventEmitter();

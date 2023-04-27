@@ -1,16 +1,18 @@
-<div class="container">
+<div class="container" >
   <ul>
-    <li class="container__list" *ngFor="let task of taskiList">
 
-      <label class="container__title">
-        {{task.title}}
-      </label>
-      <p class="container__descrip">
-        {{task.description}}
-      </p>
-      <br>
-      <button>Complete</button>
-      <button>Delete</button>
-    </li>
+      <li *ngFor="let task of taskiList; let indice = index;" [ngClass]="{container__complete: task.complete, container__Incomplete: !task.complete}">
+        <label class="container__title">
+          {{task.title}}
+        </label>
+        <p class="container__descrip">
+          {{task.description}}
+        </p>
+        <br>
+        <button class="container__click" (click)="changeCoplete(task)">
+          {{task.complete? 'INCOMPLETE' : 'COMPLETE'}}
+        </button>
+        <button class="container__click" (click)="Delete(indice)">Delete</button>
+      </li>
   </ul>
 </div>

@@ -11,7 +11,6 @@ export class AppComponent implements OnInit{
   taski: tasking[] = [];
 
   ImpList($event: any){
-    console.log($event);
     this.taski.push($event);
   }
 
