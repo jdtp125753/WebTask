@@ -1,8 +1,32 @@
 <header class="headeris bg-dark text-light text-center">
   <h1 class="title">Bull Bionic</h1>
 </header>
-<div class="bg-secondary w-100 text-center p-2">
-  <app-home-pending></app-home-pending>
-  <app-home-daily-list></app-home-daily-list>
-  <app-home-habits></app-home-habits>
+<div class="bg-secondary  w-100 text-center p-2">
+  <div class="contend w-50 p-2 mx-auto">
+    <header class="nav bg-dark text-light text-center p-2">
+      <h5>Pendientes</h5>
+      <a routerLink="/active" class="mx-2 mx-auto">Activas</a>
+      <a routerLink="/scheduled" class="mx-2 mx-auto">Programado</a>
+      <a routerLink="/completed" class="mx-2 mx-auto">Completo</a>
+    </header>
+    <app-home-pending></app-home-pending>
+  </div>
+  <div class="contend p-2 mt-2 w-50 mx-auto">
+    <header class="nav bg-dark text-light text-center p-2">
+      <h5>Diarios</h5>
+      <a routerLink="/all" class="mx-2 mx-auto">Todas</a>
+      <a routerLink="/due" class="mx-2 mx-auto">Para hoy</a>
+      <a routerLink="/notDue" class="mx-2 mx-auto">Indefinidas</a>
+    </header>
+    <app-home-daily-list></app-home-daily-list>
+  </div>
+  <div class="contend mt-2 p-2 w-50 mx-auto">
+    <header class="nav bg-dark text-light text-center p-2">
+      <h5>Habitos</h5>
+      <a routerLink="/regular" class="mx-2 mx-auto">Regular</a>
+      <a routerLink="/weak" class="mx-2 mx-auto">Fragil</a>
+      <a routerLink="/strong" class="mx-2 mx-auto">Poderoso</a>
+    </header>
+    <app-home-habits></app-home-habits>
+  </div>
 </div>

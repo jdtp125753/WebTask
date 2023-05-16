@@ -1,33 +1,8 @@
-<div class="container w-50 ">
-  <header class="nav bg-dark text-light  text-center p-2">
-    Pendientes
-    <a routerLink="" class="mx-2 mx-auto ">Activas</a>
-    <a routerLink="" class="mx-2 mx-auto ">Programado</a>
-    <a routerLink="" class="mx-2 mx-auto ">Completo</a>
-  </header>
-  <div class="container-sm bg-dark text-light p-3 contenid mt-2">
-    <div class="container-fluid">
-      <label class="text ticke-title">Buscar Tarea: </label>
-      <br>
-      <input type="text" class="search">
-    </div>
-    <div class="card bg-secondary mt-2 p-3">
-      <input type="checkbox">
-      <br>
-      <h4 class="title">Titulo de la Tarea</h4>
-      <p class="container-fluid">
-        Descripcion de la tarea
-      </p>
-      <div class="list">
-        Lista de Semi tareas
-      </div>
-      <div class="ticket">
-        Clasificación de Tarea
-      </div>
 
-      <div class="data">
-        fecha de la tarea
-      </div>
-    </div>
+<div class="container w-100 mt-2">
+  <div class="container-sm bg-dark text-light p-3 contenid mt-2">
+
+    <router-outlet></router-outlet>
+
   </div>
 </div>

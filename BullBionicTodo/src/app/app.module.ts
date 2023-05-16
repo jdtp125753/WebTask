@@ -16,6 +16,8 @@ import { WishListComponent } from "./Components/RewardsList/wish-list/wish-list.
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from "./Components/home/home.component";
+import { AllTodoComponent } from './Components/DailyTaskList/all-todo/all-todo.component';
+import { RegularComponent } from './Components/HabitsList/regular/regular.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,8 @@ import { HomeComponent } from "./Components/home/home.component";
     StrongHabitsComponent,
     WeakHabitsComponent,
     HomeRewardsComponent,
+    AllTodoComponent,
+    RegularComponent,
   ],
   imports: [
     BrowserModule,
