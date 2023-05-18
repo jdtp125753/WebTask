@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PendingService } from 'src/app/Sevice/pending.service';
 
 @Component({
   selector: 'app-scheduled-pending',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./scheduled-pending.component.scss']
 })
 export class ScheduledPendingComponent {
+  @Input() pending: any;
+  showlistSub: boolean = false;
+  constructor(private pendinServi: PendingService){
 
+  }
+
+  showSubTask(): boolean{
+    return this.showlistSub = !this.showlistSub;
+  }
 }

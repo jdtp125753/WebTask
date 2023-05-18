@@ -57,7 +57,7 @@ const routes: Routes = [
   { path: 'weak', redirectTo:'/home/habits/weak' },
 
   /**Pendientes */
-  { path: 'active', redirectTo: '/home/pending/active' },
+  { path: 'active', component: PendingActiveComponent /* redirectTo: '/home/pending/active' */ },
   { path: 'scheduled', redirectTo: '/home/pending/scheduled' },
   { path: 'completed', redirectTo: '/home/pending/completed' },
 

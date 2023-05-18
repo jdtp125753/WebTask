@@ -1,23 +1,22 @@
-<div class="container-fluid">
-  <label class="text ticke-title">Buscar Tarea: </label>
-  <br>
-  <input type="text" class="search w-100">
-</div>
-<div class="card bg-secondary mt-2 p-3">
+<div  class="card mt-2 bg-secondary mt-2 p-3">
   <input type="checkbox">
   <br>
-  <h4 class="title">Titulo de la Tarea activa</h4>
+  <h4 class="title">{{pending.title}}</h4>
   <p class="container-fluid">
-    Descripcion de la tarea
+    {{pending.description}}
   </p>
-  <div class="list">
-    Lista de Semi tareas
-  </div>
-  <div class="ticket">
-    Clasificación de Tarea
-  </div>
 
-  <div class="data">
-    fecha de la tarea
+  <button (click)="showListTask()">
+    {{this.subTasking? '^': '-'}}
+  </button>
+  <div *ngIf="this.subTasking == true">
+    <div *ngFor="let subTask of pending.subTasks" class="list">
+      <input type="checkbox" >
+      {{subTask.title}}
+    </div>
+  </div>
+  <br/>
+  <div class="ticket">
+    {{pending.classification}}
   </div>
 </div>

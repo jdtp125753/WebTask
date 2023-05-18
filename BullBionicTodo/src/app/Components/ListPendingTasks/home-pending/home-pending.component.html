@@ -1,8 +1,39 @@
+<div class="container text-light w-100 mt-2">
+  <div class="nav bg-dark text-center p-2">
+    <h5 class="w-100">Pendientes</h5>
+    <div class="conted-Button p-2 w-100">
+      <button class="btn btn-primary mx-1" (click)="openActive()">
+        Activas
+      </button>
+      <button class="btn btn-primary mx-1" (click)="openSheduled()">
+        Programado
+      </button>
+      <button class="btn btn-primary mx-1" (click)="openComplete()">
+        Completado
+      </button>
+    </div>
+    <div class="container-fluid w-50 bg-dark p-2">
+      <label class="text ticke-title w-50">Buscar Tarea: </label>
+      <br />
+      <input type="text" class="search w-50" />
+    </div>
+  </div>
+  <div class="container-sm bg-dark text-light p-3 contenid mt-1">
+    <div *ngIf="active == true">
+      <div *ngFor="let active of this.pendingsActive">
+        <app-pending-active [pending]="active"></app-pending-active>
+      </div>
+    </div>
 
-<div class="container w-100 mt-2">
-  <div class="container-sm bg-dark text-light p-3 contenid mt-2">
-
-    <router-outlet></router-outlet>
-
+    <div *ngIf="sheduled == true">
+      <div *ngFor="let scheduled of this.pendingsScheduled">
+        <app-scheduled-pending [pending]="scheduled"></app-scheduled-pending>
+      </div>
+    </div>
+    <div *ngIf="complete == true">
+      <div *ngFor="let pending of this.pendingsComplete">
+        <app-completed-earrings [pending]="pending"></app-completed-earrings>
+      </div>
+    </div>
   </div>
 </div>
