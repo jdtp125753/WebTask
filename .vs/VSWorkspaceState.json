@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BullBionicTodo",
+    "\\BullBionicTodo\\src",
+    "\\BullBionicTodo\\src\\app",
+    "\\BullBionicTodo\\src\\app\\Components",
+    "\\BullBionicTodo\\src\\app\\Components\\all-sub-task",
+    "\\BullBionicTodo\\src\\app\\Components\\ListPendingTasks",
+    "\\BullBionicTodo\\src\\app\\Components\\ListPendingTasks\\completed-earrings",
+    "\\BullBionicTodo\\src\\app\\Components\\ListPendingTasks\\home-pending",
+    "\\BullBionicTodo\\src\\app\\Components\\ListPendingTasks\\pending-active"
+  ],
+  "SelectedNode": "\\BullBionicTodo\\src\\app\\Components\\all-sub-task\\all-sub-task.component.html",
+  "PreviewInSolutionExplorer": false
+}

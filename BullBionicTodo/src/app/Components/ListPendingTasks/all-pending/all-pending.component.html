@@ -1,0 +1,55 @@
+<div *ngIf="editTask==false" class="card bg-secondary mt-2 p-3">
+  <button (click)="editTodo()">editar</button>
+  <input type="checkbox">
+  <br>
+  <h4 class="title">{{this.pending.title}}</h4>
+  <p class="container-fluid">
+    {{this.pending.description}}
+  </p>
+  <button (click)="showSubTask()">
+    {{this.subTasking? '^': '-'}}
+  </button>
+  <div *ngIf="this.subTasking == true">
+    <div *ngFor="let taks of this.pending.subTasks" class="list text-start mx-2">
+      <input type="checkbox">
+      {{taks.title}}
+    </div>
+  </div>
+  <div class="ticket">
+    {{this.pending.classification}}
+  </div>
+  <div class="data">
+    {{this.pending.deadline}}
+  </div>
+  <div class="data">
+    {{this.pending.dayWasDone}}
+  </div>
+</div>
+
+<!--Editar-->
+<div *ngIf="this.editTask==true" class="card bg-secondary mt-2 p-3">
+  <button (click)="editTodo()">Cancelar</button>
+  <button >guardar</button>
+  <br>
+  <h4 class="title">{{this.pending.title}}</h4>
+  <p class="container-fluid">
+    {{this.pending.description}}
+  </p>
+  <button (click)="showSubTask()">
+    {{this.subTasking? '^': '-'}}
+  </button>
+  <div *ngIf="this.subTasking == true">
+    <div *ngFor="let taks of this.pending.subTasks" class="list text-start mx-2">
+      <app-all-sub-task [subtask]="taks"></app-all-sub-task>
+    </div>
+  </div>
+  <div class="ticket">
+    {{this.pending.classification}}
+  </div>
+  <div class="data">
+    {{this.pending.deadline}}
+  </div>
+  <div class="data">
+    {{this.pending.dayWasDone}}
+  </div>
+</div>

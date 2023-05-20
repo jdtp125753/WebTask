@@ -10,12 +10,14 @@ export class HomePendingComponent implements OnInit {
   active: boolean;
   sheduled: boolean;
   complete: boolean;
+  all: boolean;
   pendingsComplete: any[] = [];
   pendingsActive: any[] = [];
   pendingsScheduled: any[] = [];
+  pendingsAll: any[] = [];
   constructor(private pendinServi: PendingService) {
-    this.openSheduled();
-
+    this.openAll();
+    this.getPendingsAll();
     this.getPendingsCompleted();
     this.getPendingsActive();
     this.getPendingsScheduled();
@@ -24,8 +26,10 @@ export class HomePendingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getPendingsAll(){
-    this.pendinServi.getPendingsAll()//Hay que crear el componente y configurarlo
+  getPendingsAll() {
+    this.pendinServi.getPendingsAll().subscribe((pend: any[]) => {
+      this.pendingsAll = pend; 
+    })
   }
 
   getPendingsScheduled(){
@@ -49,7 +53,15 @@ export class HomePendingComponent implements OnInit {
     })
   }
 
+  openAll(): void {
+    this.all = true; 
+    this.active = false;
+    this.sheduled = false;
+    this.complete = false;
+  }
+
   openActive(): void {
+    this.all = false; 
     this.active = true;
     this.sheduled = false;
     this.complete = false;

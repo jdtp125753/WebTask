@@ -1,0 +1,7 @@
+<div  class="content">
+  <button *ngIf="editTitle==true">Guardar</button>
+  <input type="text" [value]="subtask.title" *ngIf="editTitle==true" />
+  <label *ngIf="editTitle==false" (click)="trueSub()">{{subtask.id}}- </label>
+  <label *ngIf="editTitle==false" (click)="trueSub()">{{subtask.title}}</label>
+  <button (click)="trueSub()" *ngIf="editTitle==true">cancelar</button>
+</div>

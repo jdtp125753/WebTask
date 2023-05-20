@@ -2,6 +2,9 @@
   <div class="nav bg-dark text-center p-2">
     <h5 class="w-100">Pendientes</h5>
     <div class="conted-Button p-2 w-100">
+      <button class="btn btn-primary mx-1" (click)="openAll()">
+        Todas
+      </button>
       <button class="btn btn-primary mx-1" (click)="openActive()">
         Activas
       </button>
@@ -19,6 +22,12 @@
     </div>
   </div>
   <div class="container-sm bg-dark text-light p-3 contenid mt-1">
+    <div *ngIf="all == true">
+      <div *ngFor="let alli of this.pendingsAll">
+        <app-all-pending [pending]="alli"></app-all-pending>
+      </div>
+    </div>
+
     <div *ngIf="active == true">
       <div *ngFor="let active of this.pendingsActive">
         <app-pending-active [pending]="active"></app-pending-active>

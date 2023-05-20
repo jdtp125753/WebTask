@@ -20,6 +20,8 @@ import { AllTodoComponent } from './Components/DailyTaskList/all-todo/all-todo.c
 import { RegularComponent } from './Components/HabitsList/regular/regular.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AllPendingComponent } from './Components/ListPendingTasks/all-pending/all-pending.component';
+import { AllSubTaskComponent } from './Components/all-sub-task/all-sub-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeRewardsComponent,
     AllTodoComponent,
     RegularComponent,
+    AllPendingComponent,
+    AllSubTaskComponent,
   ],
   imports: [
     BrowserModule,
