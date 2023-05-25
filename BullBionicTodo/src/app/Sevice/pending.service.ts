@@ -26,4 +26,9 @@ export class PendingService {
   getPendingsAll():Observable<any>{
     return this.http.get<any>(`${pendingBase}`); 
   }
+
+  updateTaskPending(idTaks: number, subTaskUpdate: any){
+    return this.http.put(`${pendingBase}/${idTaks}`, subTaskUpdate); 
+  }
 }
+ 

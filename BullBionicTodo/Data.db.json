@@ -2,33 +2,25 @@
   "Pending": [
     {
       "id": 1,
-      "title": "Write a blog post",
-      "description": "Write a blog post about the latest trends in artificial intelligence.",
+      "title": "Clean the house",
+      "description": "Vacuum the floors, dust the furniture, and do the laundry.",
       "subTasks": [
         {
           "id": 0,
-          "title": "Do research on the latest trends in artificial intelligence."
+          "title": "Barrer y trapear"
         },
         {
           "id": 1,
-          "title": "Write an outline for the blog post."
+          "title": "Dust the furniture."
         },
         {
           "id": 2,
-          "title": "Write the blog post."
-        },
-        {
-          "id": 3,
-          "title": "Edit the blog post."
-        },
-        {
-          "id": 4,
-          "title": "Publish the blog post."
+          "title": "Lavar el Baño"
         }
       ],
       "classification": "completed",
-      "deadline": "2023-05-17",
-      "dayWasDone": "2023-05-17"
+      "deadline": "2023-05-20",
+      "dayWasDone": "2023-05-18"
     },
     {
       "id": 2,
@@ -268,6 +260,5 @@
       "deadline": null,
       "dayWasDone": null
     }
-
   ]
 }

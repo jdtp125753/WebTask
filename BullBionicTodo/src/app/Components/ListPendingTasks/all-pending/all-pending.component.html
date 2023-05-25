@@ -40,7 +40,7 @@
   </button>
   <div *ngIf="this.subTasking == true">
     <div *ngFor="let taks of this.pending.subTasks" class="list text-start mx-2">
-      <app-all-sub-task [subtask]="taks"></app-all-sub-task>
+      <app-all-sub-task [idSubi]="idSubTask()"  [Task]="pending" [subtask]="taks"></app-all-sub-task>
     </div>
   </div>
   <div class="ticket">
