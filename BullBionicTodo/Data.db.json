@@ -16,6 +16,42 @@
         {
           "id": 2,
           "title": "Lavar el Baño"
+        },
+        {
+          "id": 3,
+          "title": "Lavar los Platos"
+        },
+        {
+          "id": 4,
+          "title": "Limpiar Comedor"
+        },
+        {
+          "id": 6,
+          "title": "Bañar el Perro"
+        },
+        {
+          "id": 7,
+          "title": "Bañar al Gato"
+        },
+        {
+          "id": 8,
+          "title": "Lavar las canecas de Basura"
+        },
+        {
+          "id": 9,
+          "title": "Acicalarme"
+        },
+        {
+          "id": 10,
+          "title": "Lavar la Ropa"
+        },
+        {
+          "id": 11,
+          "title": "prueba "
+        },
+        {
+          "id": 12,
+          "title": "prueba2"
         }
       ],
       "classification": "completed",

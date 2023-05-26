@@ -27,7 +27,7 @@
 </div>
 
 <!--Editar-->
-<div *ngIf="this.editTask==true" class="card bg-secondary mt-2 p-3">
+<form [formGroup]="task" *ngIf="this.editTask==true" class="card bg-secondary mt-2 p-3">
   <button (click)="editTodo()">Cancelar</button>
   <button >guardar</button>
   <br>
@@ -39,8 +39,13 @@
     {{this.subTasking? '^': '-'}}
   </button>
   <div *ngIf="this.subTasking == true">
-    <div *ngFor="let taks of this.pending.subTasks" class="list text-start mx-2">
+    <div *ngFor="let taks of this.subTodo" class="list text-start mx-2">
       <app-all-sub-task [idSubi]="idSubTask()"  [Task]="pending" [subtask]="taks"></app-all-sub-task>
+    </div>
+    <div>
+      <input formControlName="addSub" *ngIf="addSubTask ==true" type="text"><br/>
+      <button (click)="saveSubTodo()" *ngIf="addSubTask ==true" >save</button>
+      <button (click)="addTodo()" *ngIf="addSubTask==false">add</button>
     </div>
   </div>
   <div class="ticket">
@@ -52,4 +57,4 @@
   <div class="data">
     {{this.pending.dayWasDone}}
   </div>
-</div>
+</form>
