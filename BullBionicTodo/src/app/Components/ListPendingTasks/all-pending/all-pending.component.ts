@@ -15,6 +15,9 @@ export class AllPendingComponent {
   task: FormGroup;
   subTasking: boolean = false;
   editTask: boolean = false; 
+  editTitle: boolean = false; 
+  editDescription: boolean = false;
+  editClasification: boolean = false; 
   addSubTask: boolean = false; 
   
   constructor(private servi: PendingService) {
@@ -26,14 +29,38 @@ export class AllPendingComponent {
       deadLine: new FormControl('')
     })
   }
-
+  
   ngOnInit(): void {
-    
     this.Task = this.pending; 
     this.subTodo = this.Task.subTasks;
     this.Task.subTasks = this.subTodo;
+    this.task.controls['title'].setValue(this.Task.title);
   }
   
+  editTitleTli():boolean{
+    return this.editTitle = !this.editTitle;
+  }
+  
+  saveTitle(){
+    let inputvalue = this.task.controls['title'].value; 
+    if(inputvalue.trim() === ''){
+      alert('Agrega una subtarea antes de guardar');
+    }else{
+      this.Task.title = this.task.value['title'];
+      this.servi.updateTaskPending( this.Task.id, this.Task).subscribe(
+        (e:any) => console.log('Actualizando Tarea')
+      );
+    }
+    this.editTitle = false;
+  }
+
+  deleteSubTask(index: number){
+    let objectId: number = index-1;
+    this.subTodo.splice(objectId, 1);
+    this.servi.updateTaskPending( this.Task.id, this.Task).subscribe(
+      (e:any) => console.log('Actualizando Tarea')
+    );
+  }
   saveSubTodo():void{
     let inputvalue = this.task.controls['addSub'].value; 
     if(inputvalue.trim() === ''){

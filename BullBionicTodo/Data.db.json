@@ -2,16 +2,16 @@
   "Pending": [
     {
       "id": 1,
-      "title": "Clean the house",
+      "title": "Limpiar la Casa",
       "description": "Vacuum the floors, dust the furniture, and do the laundry.",
       "subTasks": [
         {
           "id": 0,
-          "title": "Barrer y trapear"
+          "title": "Barrer"
         },
         {
           "id": 1,
-          "title": "Dust the furniture."
+          "title": "Trapear"
         },
         {
           "id": 2,
@@ -35,23 +35,7 @@
         },
         {
           "id": 8,
-          "title": "Lavar las canecas de Basura"
-        },
-        {
-          "id": 9,
-          "title": "Acicalarme"
-        },
-        {
-          "id": 10,
-          "title": "Lavar la Ropa"
-        },
-        {
-          "id": 11,
-          "title": "prueba "
-        },
-        {
-          "id": 12,
-          "title": "prueba2"
+          "title": "Lavar canecas de basura"
         }
       ],
       "classification": "completed",

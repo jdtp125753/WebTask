@@ -31,7 +31,11 @@
   <button (click)="editTodo()">Cancelar</button>
   <button >guardar</button>
   <br>
-  <h4 class="title">{{this.pending.title}}</h4>
+  <div *ngIf="editTitle==true">
+    <input type="text" formControlName="title" >
+    <button (click)="saveTitle()">save</button>
+  </div>
+  <h4 *ngIf="editTitle==false" (click)="editTitleTli()" class="title">{{this.pending.title}}</h4>
   <p class="container-fluid">
     {{this.pending.description}}
   </p>
@@ -39,8 +43,9 @@
     {{this.subTasking? '^': '-'}}
   </button>
   <div *ngIf="this.subTasking == true">
-    <div *ngFor="let taks of this.subTodo" class="list text-start mx-2">
-      <app-all-sub-task [idSubi]="idSubTask()"  [Task]="pending" [subtask]="taks"></app-all-sub-task>
+    <div *ngFor="let taks of this.subTodo" class="list text-start  mx-2">
+      <app-all-sub-task  [idSubi]="idSubTask()"  [Task]="pending" [subtask]="taks"></app-all-sub-task>
+      <button (click)="deleteSubTask(taks.id)">X</button>
     </div>
     <div>
       <input formControlName="addSub" *ngIf="addSubTask ==true" type="text"><br/>
