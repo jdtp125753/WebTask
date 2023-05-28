@@ -3,12 +3,10 @@
   <input
     formControlName="title"
     type="text"
-    placeholder="{{ this.subtask.title }}"
+    
     *ngIf="editTitle == true"
   />
-  <label *ngIf="editTitle == false" (click)="trueSub()"
-    >{{ this.subtask.id + 1 }}-
-  </label>
+  
   <label *ngIf="editTitle == false" (click)="trueSub()">{{
     subtask.title
   }}</label>

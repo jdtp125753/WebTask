@@ -67,12 +67,14 @@ export class HomePendingComponent implements OnInit {
     this.complete = false;
   }
   openSheduled() {
+    this.all = false;
     this.active = false;
     this.sheduled = true;
     this.complete = false;
   }
 
   openComplete() {
+    this.all = false;
     this.active = false;
     this.sheduled = false;
     this.complete = true;

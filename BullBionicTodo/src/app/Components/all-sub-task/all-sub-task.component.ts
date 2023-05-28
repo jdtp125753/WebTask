@@ -13,7 +13,10 @@ export class AllSubTaskComponent implements OnInit {
   @Input() Task: any; 
   id: number;
   pending: any; 
-  subts: any = {id:0, title:''};
+  subts: any ={
+    id: 0,
+    title:''
+  };
   subTodo: any[];
   editTitle: boolean = false;
   changeTitle: FormGroup;
@@ -24,6 +27,7 @@ export class AllSubTaskComponent implements OnInit {
    this.id =  this.idSubi;
   }
   ngOnInit(): void {
+    this.changeTitle.controls['title'].setValue(this.subtask.title);
     this.pending = this.Task;
     this.subTodo = this.pending.subTasks; 
     console.log(this.idSubi)
