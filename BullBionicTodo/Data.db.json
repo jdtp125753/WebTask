@@ -20,7 +20,7 @@
       ],
       "classification": "completed",
       "deadline": "2023-05-27",
-      "dayWasDone": "2023-05-27"
+      "dayWasDone": "2023-05-29"
     },
     {
       "id": 2,
@@ -66,9 +66,9 @@
           "title": "Put the groceries away."
         }
       ],
-      "classification": "completed",
+      "classification": "scheduled",
       "deadline": "2023-05-20",
-      "dayWasDone": "2023-05-27"
+      "dayWasDone": null
     },
     {
       "id": 4,
@@ -94,7 +94,7 @@
       ],
       "classification": "completed",
       "deadline": "2023-05-17",
-      "dayWasDone": "2023-05-27"
+      "dayWasDone": "2023-05-29"
     },
     {
       "id": 5,
@@ -127,8 +127,8 @@
         }
       ],
       "deadline": "",
-      "dayWasDone": null,
-      "classification": "active"
+      "dayWasDone": "2023-05-29",
+      "classification": "completed"
     },
     {
       "id": 6,
@@ -212,9 +212,9 @@
           "title": "Hang up the phone."
         }
       ],
-      "classification": "completed",
+      "classification": "scheduled",
       "deadline": "2023-05-15",
-      "dayWasDone": "2023-05-10"
+      "dayWasDone": null
     },
     {
       "id": 9,

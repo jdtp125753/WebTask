@@ -1,27 +1,32 @@
-<div class="container text-light w-100 mt-2">
-  <div class="nav bg-dark text-center p-2">
-    <h5 class="w-100">Pendientes</h5>
-    <div class="conted-Button p-2 w-100">
-      <button class="btn btn-primary mx-1" (click)="openAll()">
-        Todas
+<div class="Content">
+  <div class="header-chill">
+    <h5 class="title">Pendientes {{this.alln? this.allNumber:this.countAll()}} </h5>
+    
+    <div class="header-buttons">
+      <button class="buton all" (mouseenter)="showlabel('al')" (mouseleave)="downlabel()" (click)="openAll()">
+        <div>
+          <label class="b-label" *ngIf="labelAll==true" >Todas </label>
+          <mat-icon class="b-icon" >all_out</mat-icon>
+        </div>
       </button>
-      <button class="btn btn-primary mx-1" (click)="openActive()">
-        Activas
+      <button class="buton active" (mouseenter)="showlabel('ac')" (mouseleave)="downlabel()" (click)="openActive()">
+        <label class="b-label" *ngIf="labelActive==true" >activas</label>
+        <mat-icon class="b-icon" >stars</mat-icon>
       </button>
-      <button class="btn btn-primary mx-1" (click)="openSheduled()">
-        Programado
+      <button class="buton scheduled" (mouseenter)="showlabel('sc')" (mouseleave)="downlabel()" (click)="openSheduled()">
+        <label class="b-label" *ngIf="labelSchedu==true" >Programadas</label>
+        <mat-icon class="b-icon">alarm</mat-icon>
       </button>
-      <button class="btn btn-primary mx-1" (click)="openComplete()">
-        Completado
+      <button class="buton completed" (mouseenter)="showlabel('com')" (mouseleave)="downlabel()" (click)="openComplete()">
+        <label class="b-label" *ngIf="labelCompleted==true" >Completadas</label>
+        <mat-icon class="b-icon" >alarm_on</mat-icon>
       </button>
     </div>
-    <div class="container-fluid w-50 bg-dark p-2">
-      <label class="text ticke-title w-50">Buscar Tarea: </label>
-      <br />
-      <input type="text" class="search w-50" />
+    <div class="header-contend-sheard">
+      <input type="text" placeholder=" Buscar Tarea" class="header-sheard" />
     </div>
   </div>
-  <div class="container-sm bg-dark text-light p-3 contenid mt-1">
+  <div class="contend-sm">
     <div *ngIf="all == true">
       <div *ngFor="let alli of this.pendingsAll">
         <app-all-pending [pending]="alli"></app-all-pending>

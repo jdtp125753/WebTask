@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AllPendingComponent } from './Components/ListPendingTasks/all-pending/all-pending.component';
 import { AllSubTaskComponent } from './Components/all-sub-task/all-sub-task.component';
+import {MatIconModule} from '@angular/material/icon'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,12 +44,14 @@ import { AllSubTaskComponent } from './Components/all-sub-task/all-sub-task.comp
     RegularComponent,
     AllPendingComponent,
     AllSubTaskComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

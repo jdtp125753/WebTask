@@ -1,0 +1,42 @@
+.headeris {
+  width: 99%;
+  height: 8%;
+  text-align: left;
+  padding: 0.5%;
+  margin-left: 0.5%;
+  margin-top: 0.5%;
+  color: red;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.829);
+  border-radius: 0.5rem;
+}
+.contend {
+  position: absolute;
+  width: 99%;
+  height: 88%;
+  margin-top: 5%;
+  margin-left: 0.5%;
+  overflow: hidden scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  .contend-chill {
+    width: 32%;
+    height: 98%;
+    overflow: hidden scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .contend-chill::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+.contend::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

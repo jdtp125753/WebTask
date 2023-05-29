@@ -111,8 +111,11 @@ export class AllPendingComponent {
       this.Task.dayWasDone = this.task.value['wasDate'];
       this.Task.classification = 'completed';
       this.servi
-        .updateTaskPending(this.Task.id, this.Task)
-        .subscribe((_e: any) => console.log('Actualizando Tarea'));
+      .updateTaskPending(this.Task.id, this.Task)
+      .subscribe((_e: any) =>{
+        location.reload();
+        console.log('Actualizando Tarea');
+      });
       this.taskicomplete = true;
       console.log(this.date);
     } else {
@@ -127,7 +130,10 @@ export class AllPendingComponent {
       }
       this.servi
         .updateTaskPending(this.Task.id, this.Task)
-        .subscribe((_e: any) => console.log('Actualizando Tarea'));
+        .subscribe((_e: any) =>{
+          location.reload();
+          console.log('Actualizando Tarea');
+        });
       this.taskicomplete = false;
     }
   }

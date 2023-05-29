@@ -1,26 +1,78 @@
-
-<div  class="card bg-secondary mt-2 p-3">
-  <input type="checkbox" >
-  <br>
-  <h4 class="title">{{this.pending.title}}</h4>
+<div *ngIf="editTask==false" class="card bg-secondary mt-2 p-3">
+  <button (click)="editTodo()">editar</button>
+  <input (change)="ActiveComplete($event)" [checked]="this.aComplete === 'completed'" type="checkbox">
+  
+  <h4 class="title">{{this.Task.title}}</h4>
   <p class="container-fluid">
+    {{this.Task.description}}
+  </p>
+  <button (click)="showSubTask()">
+    {{this.subTasking? '^': '-'}}
+  </button>
+  <div *ngIf="this.subTasking == true">
+    <div *ngFor="let taks of this.subTodo" class="list text-start mx-2">
+      <input type="checkbox">
+      {{taks.title}}
+    </div>
+  </div>
+  <div class="ticket">
+    {{this.Task.classification}}
+  </div>
+  <div class="data">
+
+    <label *ngIf="this.showDeadLine == true"> {{this.showDeadLine?'vence: '+this.Task.deadline:''}}</label>
+    
+  </div>
+  <div class="data">
+    <label (mouseenter)="showDataComplete()" *ngIf="showCompleteTask==false">{{this.taskicomplete?'La tarea esta completada':'La tarea no se a completado'}}</label>
+    <label (mouseleave)="showDataComplete()" *ngIf="showCompleteTask==true">
+      {{this.taskicomplete?'Se completo en el ' + this.Task.dayWasDone: 'La Tarea esta incompleta'}}
+    </label>
+  </div>
+</div>
+
+<!--Editar-->
+<form [formGroup]="task" *ngIf="this.editTask==true" class="card bg-secondary mt-2 p-3">
+  <button (click)="canselEdit()">Cancelar</button>
+  <button (click)="saveTask()">guardar</button>
+  <br>
+  <div *ngIf="editTitle==true">
+    <input type="text" formControlName="title" >
+    <button (click)="saveTitle()">save</button>
+  </div>
+  <h4 *ngIf="editTitle==false" (click)="editTitleTli()" class="title">{{this.pending.title}}</h4>
+  <div *ngIf="editDescription == true">
+    <button (click)="saveDescription()">save</button>
+    <textarea  formControlName="description"  cols="50" rows="5"></textarea>
+  </div>
+  <p (click)="editDescriptioni()" *ngIf="editDescription == false" class="container-fluid">
     {{this.pending.description}}
   </p>
   <button (click)="showSubTask()">
-    {{this.showlistSub? '~':'^'}}
+    {{this.subTasking? '^': '-'}}
   </button>
-  <div *ngIf="this.showlistSub == true">
-    <div *ngFor="let semiTask of this.pending.subTasks" class="list">
-      <input type="checkbox" >
-      {{semiTask.title}}
+  <div *ngIf="this.subTasking == true" >
+    <div *ngFor="let taks of this.subTodo " class="list text-start mx-2">
+      <app-all-sub-task [idSubi]="idSubTask()" [Task]="Task" [subtask]="taks"></app-all-sub-task>
+      <button (click)="deleteSubTask(taks.id)">X</button>
+    </div>
+    <div>
+      <input formControlName="addSub" *ngIf="addSubTask ==true" type="text"><br/>
+      <button (click)="saveSubTodo()" *ngIf="addSubTask ==true" >save</button>
+      <button (click)="addTodo()" *ngIf="addSubTask==false">add</button>
     </div>
   </div>
-
-  <div class="ticket mt-2">
+  <div class="ticket">
     {{this.pending.classification}}
   </div>
-
-  <div class="data">
-    {{this.pending.deadline}}
+  <div *ngIf="this.editDeadLine==true">
+    <input formControlName="deadLine" type="date">
+    <button (click)="saveDeadLine()">save</button>
   </div>
-</div>
+  <div (click)="this.editDeadLinei()" *ngIf="this.editDeadLine==false" class="data">
+    Fecha de Vencimiento: {{this.pending.deadline}}
+  </div>
+  <div class="data">
+    Feha en la que se completo: {{this.pending.dayWasDone}}
+  </div>
+</form>
